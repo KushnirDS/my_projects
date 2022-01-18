@@ -1,0 +1,194 @@
+/* 
+
+write your code here
+
+*/
+
+@media print {
+
+    h2 + p {
+        font-style: italic;
+    }
+    .container .tm-main-content .tm-content-box .padding-medium h2 ~ p {
+        text-indent: 30px;
+    }
+    .container .tm-main-content .tm-content-box .padding-medium .tm-section-title{
+        color: blue;
+    }
+
+    .container p::first-letter{ /* color of first letter in each paragraphs*/
+        color: #87CEFA;
+        font-size: 25px;
+        
+    }
+    
+    [class="tm-content-box"], [class="heading tm-content-box"], [class="blocks"], [id="ideas"], [class="tm-content-box"]
+    {
+        display: none;
+    }
+    
+    .container .tm-main-content .flex-2-col{
+    align-items: center;
+        display: flex;
+    }
+
+    .container .tm-main-content .padding-medium {
+        width: 55%;
+    }
+
+    .container .tm-main-content .epam-mexico {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media screen {
+    
+    h2 + p {
+        font-style: italic;
+    }
+    .flex-2-col{
+        align-items: center;
+        display: flex;
+    }
+
+    .container .tm-main-content [class="padding-medium flex-item tm-team-description-container flex-item"]{
+        vertical-align: top;
+    }
+
+    .container p::first-letter{ /* color of first letter in each paragraphs*/
+        color: #87CEFA;
+        font-size: 30px;
+
+    }
+    
+    .container .tm-sidebar .tm-main-nav li:hover {
+        background-color: rgb(241, 233, 233);
+    }
+    .container .tm-main-content .tm-banner { /*border to the banner*/
+        border: 1px grey solid;
+    }
+
+    .container .tm-sidebar, .tm-main-content, .tm-content-box, .blocks { /*box shadow to navigation and each content block*/
+        box-shadow:  0 0 5px 1px gray;
+    }
+
+    .container .tm-main-content .padding-medium {
+        line-height: 25pt;
+        position: relative;
+    }
+    
+    .container .tm-main-content  .padding-medium h2 ~ p {
+        text-indent: 30px;
+    }
+    .container .tm-main-content .tm-content-box .padding-medium h2 ~ p:last-child {
+        font-weight: bolder;
+    }
+    .container .tm-main-content .flex-2-col {
+        position: relative;
+    }
+    .container .tm-main-content .flex-2-col::after {
+        border-color: #07acfc transparent transparent transparent;
+        border-style: solid;
+        border-width: 50px 300px 0 0;
+        content: ''; 
+        left: 0; top: 0; 
+        position: absolute;
+    }
+    
+    .container .tm-main-content [class="padding-medium flex-item tm-team-description-container"]::after {
+        border-color: #07acfc transparent transparent transparent;
+        border-style: solid;
+        border-width: 50px 300px 0 0;
+        content: ''; 
+        left: 0; top: 0; 
+        position: absolute;
+    }
+
+    .container .tm-main-content [class="padding-medium"]::after{
+        border-color: #07acfc transparent transparent transparent;
+        border-style: solid;
+        border-width: 50px 300px 0 0;
+        content: ''; 
+        left: 0; top: 0; 
+        position: absolute;
+    }
+    .carousel::after{
+        border-color: #07acfc transparent transparent transparent;
+        border-style: solid;
+        border-width: 50px 300px 0 0;
+        content: ''; 
+        left: 0; top: 0; 
+        position: absolute;
+    }
+
+    .container .tm-main-content .tm-content-box .boxes .box-bg h2:hover{
+        background-color: lightblue;
+        color: white;
+    }
+
+    .container .tm-main-content .heading .padding-medium a {
+        color: black;
+    }
+    .container .tm-main-content .heading .padding-medium a:visited {
+        text-decoration: underline;
+    }
+    .container .tm-main-content .heading .padding-medium a:hover {
+        color: #07acfc;
+        text-decoration-style: double;
+    }
+
+    .container .tm-main-content .heading .padding-medium .text::after{
+        color: red;
+        content: 'New';
+        font-size: 12px;
+        vertical-align: super;
+    }
+   
+
+    .container .tm-main-content .blocks .tm-content-box .boxes .box-work {
+        box-sizing: border-box;
+        background-color: rgb(230, 224, 224);
+        padding: 10px;
+    }
+    .container .tm-main-content .blocks .tm-content-box .boxes .box-work:nth-child(odd) {
+        background-color: white;
+    }
+
+    .container .tm-main-content .blocks .tm-content-box .boxes .box-work p::first-letter {
+        color: black;
+        font-size: 30px;
+    }
+
+    .container .tm-main-content #ideas .carousel-inner .carousel-item .carousel-content .flex-item .tm-section-title{
+        color: gainsboro;
+        letter-spacing: 5px;
+    }
+
+    .container .tm-main-content .tm-content-box .contact-form #contactmail{
+        position: relative;
+    }
+    .container .tm-main-content .tm-content-box .contact-form .form-group-2-col-right::after{
+        color: red;
+        content: '*';
+        font-size: 12px;
+        font-weight: bold;
+        
+    }
+    .container .tm-main-content .tm-content-box .contact-form .btn {
+        color: #07acfc;
+        background-color: white;
+        border: #07acfc 1px solid;
+        border-radius: 0;
+        float: right;
+        height: 50px;
+        width: 200px;
+    }
+
+    .container .tm-main-content .tm-content-box .contact-form .btn:hover {
+        color: white;
+        background-color: #07acfc;
+        
+    }
+
+}

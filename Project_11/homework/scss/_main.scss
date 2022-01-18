@@ -1,0 +1,247 @@
+// Write your styles here
+@mixin logo {
+    display: $inLine;
+    text-align: left;
+}
+
+@mixin textHeader {
+    font-family: $fontFamilySource;
+    color: $colorTextHeader;
+    z-index: 4;
+}
+
+@mixin button {
+    background-color: $colorButton;
+    border: none;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-family: $fontFamilySource;
+    font-size: 16px;
+}
+
+@mixin paragraph {
+    font-family: $fontFamilySource;
+    font-size: 32px;
+    font-weight: map-get($font-weights, 'bold');
+    color: rgb(78, 65, 65);
+    text-align: center;
+}
+
+@mixin fontFamilyLogo {
+    font-family: $fontFamilySource;
+    font-size: 14pt;
+}
+
+@mixin footer {
+    font-family: $fontFamilySource;
+    color: $colorParagraphSectionCard;
+}
+
+@mixin marker {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: $markerBackground;
+    z-index: -1;
+}
+
+$font-weights: ('regular': 400, 'medium': 600, 'bold': 800);
+
+body {
+    text-align: center;
+    background-color: $BackgroundBody;
+    
+    .header{
+        text-align: left;
+        background-image: $backgroundImage;       
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 500px;
+        border-bottom-right-radius: 60%;
+        margin: auto;
+        z-index: -3;
+        
+        .header-wrap {
+
+            margin-inline-start: 100px;
+            width: 40%;
+
+            .landing-logo{
+                @include fontFamilyLogo;
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                color: $colorLandingLogo;
+                font-weight: map-get($font-weights, 'medium');
+            }
+            .header_heading {
+                @include textHeader;
+                font-size: 45px;
+                font-weight: map-get($font-weights, 'bold');
+                width: 400px;
+                position: relative;
+                
+                &:after {
+                    @include marker;
+                    width: 200px;
+                    height: 50px;
+                    top: 70px;
+                    
+                }
+            }
+            .header_text {
+                @include textHeader;
+                margin-bottom: 50px;
+                position: static;
+            }
+        }
+    
+        .login {
+            float: right;
+            color: white;
+        }
+    }
+    .header_button {
+        @include button;
+    }
+    .section {
+       
+        .section_text {
+            @include paragraph;
+            position: relative;
+        
+            &:after {
+                @include marker;
+                width: 150px;
+                height: 40px;
+                left: 742px;
+                top: 0;
+            }
+        }
+        .section_card {
+            background-color: $divBackground;
+            margin: 20px auto 20px auto;
+            width: 60%;
+            text-align: center;
+            display: flex;
+            z-index: 1;
+            align-items: center;
+
+            img {
+                margin: 20px;
+                width: 330px;
+            }
+            .section_card_right_container {
+                padding-left: 20px;
+            }
+
+            .section_card_heading {
+                color: $colorParagraphSectionCard;
+                font-family: $fontFamilySource;
+                font-size: 20px;  
+            }
+
+            .section_card_text {
+                text-align: justify;
+                margin: 30px 0 15px 0;
+                width: 450px;
+                color: $colorTextSectionCard;
+            }
+
+            .section_link {
+                color: $colorTextSectionCard;  
+            }
+        }
+    }
+
+    .section_banner {
+        background: linear-gradient(to left, $colorLinearGradientStart, $colorLinearGradientEnd);
+        width: 80%;
+        margin: 80px 10% 0 10% ;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .section_banner_text_wrap {
+            display: $inLine;
+            margin-left: 15%;
+
+            .section_banner_heading {
+                @include paragraph;
+                position: relative;
+        
+                &:after {
+                    @include marker;
+                    width: 80px;
+                    height: 40px;
+                    left: 125px;
+                    top: 0;
+                }
+            }
+            .section_banner_text {
+                text-align: left;
+                font-family: $fontFamilySource;
+                color: $bannerText;
+            }
+        }
+        .section_banner_button {
+            margin-right: 150px;
+        }
+        
+    }
+
+    .section_banner_button {
+        @extend .header_button;
+    }
+
+    .landing-logo img {
+        @include logo;
+     }
+
+    .landing-logo p {
+        @include logo;
+
+        span {
+            display: block;
+            font-size: 10px;
+        }
+    }
+    .footer {
+        background-color: $divBackground;
+        margin-top: 150px;
+        color: $colorParagraphSectionCard;
+        height: 250px;
+        
+        .footer-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 150px 100px 0px 100px;
+    
+            .footer_logo {
+                @include footer;
+                @include fontFamilyLogo;
+                
+                span {
+                    text-align: center;
+                }
+            }
+    
+            .footer_text {
+                @include footer;
+                text-align: justify;
+                width: 350px;
+            }
+    
+            .footer-cr {
+                @include footer;
+            }
+        }
+    
+        
+    }
+}

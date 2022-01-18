@@ -1,0 +1,138 @@
+/* START: Task 1 Styles */
+
+#task1 #table {
+    width: 80%;
+    border: 1px black solid;
+    border-collapse: collapse;
+    align-content: center;
+    margin: auto;
+    background-color: white;
+}
+
+#task1 #table td{
+    border: 1px black solid;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    
+}
+
+.specialCell {
+    background-color: green;
+}
+
+.backgroundCellTrOnClick {
+    background-color: blue;
+}
+
+.backgroundCellTdOnClick { background-color: yellow; }
+
+
+/* END: Task 1 Styles */
+
+
+/* START: Task 2 Styles */
+
+#task2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+input[type=text]{
+   
+    width: 21%;
+    border: 1px solid #333;
+    margin: 0;
+  
+    font-family: inherit;
+    font-size: 90%;
+  
+    box-sizing: border-box;
+}
+  
+.input_invalid{
+    border-color:red;
+    
+}
+
+.input_valid{
+    border-color: black;
+    background-color: white;
+}
+  
+.error {
+    width  : 25%;
+    padding: 3px;
+    margin-bottom: 10px;
+  
+    font-size: 14px;
+    color: white;
+    background-color: rgb(247, 96, 96);
+    border-radius: 0 0 5px 5px;
+  
+    box-sizing: border-box;
+}
+
+.valid {
+    width  : 25%;
+    padding: 3px;
+    margin-bottom: 10px;
+  
+    font-size: 14px;
+    color: white;
+    background-color: rgb(6, 192, 6);
+    border-radius: 0 0 5px 5px;
+  
+    box-sizing: border-box;
+}
+  
+
+
+/* END: Task 2 Styles */
+
+
+
+/* START: Task 3 Styles */
+
+
+#task3 {
+    text-align: center;
+    
+    width: 600px;
+    margin: auto;
+}
+
+
+#court {
+    
+    position:relative;
+    width: 600px;
+    height: 300px;
+    
+}
+
+#ball {                      
+    position: absolute;      
+    width: 40px;
+    height: 40px;
+    transition: all 1s;      
+}
+
+#teamA {
+    float: left;
+}
+
+#teamB {
+    float: right;
+}
+
+.winTeamA {
+    color: blue;
+}
+.winTeamB {
+    color: red;
+}
+
+/* END: Task 3 Styles */
+
+

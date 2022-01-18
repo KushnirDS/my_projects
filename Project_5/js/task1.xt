@@ -1,0 +1,39 @@
+// Your code goes here
+
+let inputsMoney = prompt('inputs initial amount of money', 1000);
+let inputsYears = prompt('inputs number of years', 3);
+let inputsProcent = prompt('inputs percentage of a year', 10);
+inputsMoney = Number(inputsMoney);
+inputsYears = Number(inputsYears);
+inputsProcent = Number(inputsProcent);
+
+// console.log (typeof (inputsMoney)); //false
+// console.log (typeof (inputsYears)); //false
+// console.log (typeof (inputsProcent)); //false
+// console.log (inputsMoney >= 1000); //false
+
+console.log(Number.isInteger(inputsYears));
+console.log(Number.isInteger(2));
+console.log(Number.isInteger(2,5));
+console.log(Number.isInteger(2.5));
+
+let summ = 0;
+
+console.log(typeof (summ));
+if (inputsMoney >= 1000 && inputsYears >= 1 && inputsProcent < 100 && Number.isInteger(inputsYears) && !Object.is(inputsYears, NaN)) {
+    summ += inputsMoney * inputsProcent / 100;
+    console.log(summ);
+    for (let i = 2; i <= inputsYears; i++) {
+
+        summ += (inputsMoney + summ) * inputsProcent / 100;
+        console.log(summ);
+    }
+    window.alert('Initial amount: ' + inputsMoney + '\n' + 'Number of years: ' + 
+    inputsYears + '\n' + 'Percentage of year: ' + inputsProcent + '\n' + '\n' +
+    'Total profit: ' + summ.toFixed(2) + '\n' + 'Total amount: ' + (inputsMoney + summ).toFixed(2));
+} else {
+
+    window.alert('Invalid input data'); 
+    
+}
+

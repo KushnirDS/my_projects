@@ -1,0 +1,66 @@
+/* write your styles here */
+#app-root{
+    text-align: center;
+    
+}
+ul {
+    display: inline-block;
+    text-align: left;
+ 
+}
+li {
+    list-style-type: none;
+    
+}
+
+#app-root div{
+    padding-bottom: 15px;
+}
+
+#app-root table {
+    width: 80%;
+    border: 1px black solid;
+    border-collapse: collapse;
+    align-content: center;
+    margin: auto;
+}
+
+#app-root table th { 
+    background-color: rgb(13, 196, 13);
+    border: 1px black solid;
+    font-size: 20px;
+    padding: 5px;
+    position: relative;
+}
+
+th::after {
+    color: yellow;
+    content: '^';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#app-root #addSpanForSelect {
+    flex-direction: column-reverse;
+}
+#app-root #addSpanForSelect {
+    margin-right: 30px;
+}
+
+#app-root table tr:nth-child(even) {
+    background-color: #a3a1a156; 
+    border: 1px black solid;
+}
+#app-root table td {
+    border: 1px black solid;
+}
+
+#app-root table tr:hover td{
+    background: rgb(133, 132, 132);
+}
+
+p {
+    padding-left: 40px;
+    position: relative;
+}
+
